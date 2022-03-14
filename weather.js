@@ -62,19 +62,7 @@ async function showWeather(city){
         const data = await fetch(url)
         const response = await data.json()
         console.log(data);
-        if(!response.ok){
-            message.innerText = `Fetching Error`;
-            setTimeout(() => {
-                message.innerText = ""
-            }, 3000);
-        }
-        if(citiesArr.includes(response.name)){
-            message.innerText = `You already know the weather for ${response.name},Please search for another city`;
-            setTimeout(() => {
-                message.innerText = ""
-            }, 3000);
-        }
-        else {
+
             cities.innerHTML = `<div  class="city">
             <div class="city-name"> ${response.name}<sup>${response.sys.country}</sup></div>
             <div class="city-temp"> ${Math.round(response.main.temp)}<sup>${"°C"}</sup></div> 
@@ -84,9 +72,8 @@ async function showWeather(city){
             citiesArr.push(response.name);
             document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + city +"')"
             
-        }
     } catch (error) {
-        message.innerText = `No city with this name found`;
+        message.innerText = `No city found, please try again!`;
             setTimeout(() => {
                 message.innerText = ""
             }, 3000);

@@ -61,7 +61,7 @@ body {
 .main-container {
   max-width: 500px;
   height: 800px;
-  margin: 100px auto;
+  margin: 10px auto;
   border-radius: 20px;
   outline: 5px inset var(--text_dark);
   outline-offset: 2px;
@@ -98,7 +98,7 @@ body {
   text-shadow: 3px 3px 2px black;
   font-size: 4rem;
   letter-spacing: 0.02em;
-  padding: 0 0 30px 0;
+  padding: 0 0 20px 0;
 }
 
 .top-banner form {
@@ -110,7 +110,7 @@ body {
 
 .top-banner form input {
   font-size: 2rem;
-  height: 40px;
+  height: 30px;
   padding: 5px 5px 10px;
   border-bottom: 1px solid;
   width: 100%;
